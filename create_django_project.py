@@ -10,8 +10,16 @@ arguments = parser.parse_args()
 chapter_name = f"Chapter\ {arguments.chapter_number}"
 
 os.system(f"mkdir {chapter_name}")
-
 os.chdir(os.getcwd() + f"/{chapter_name}".replace('\\', ''))
+
+# Creates Poetry project
 os.system(f'poetry init --no-interaction')
+
+# Adds Django to dependencies
 os.system('poetry add Django')
+
+# Installs dependencies
 os.system('poetry install')
+
+# Creates Django project
+os.system('poetry run django-admin startproject config .')

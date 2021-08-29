@@ -18,6 +18,9 @@ os.system(f'poetry init --no-interaction')
 # Adds Django to dependencies
 os.system('poetry add Django')
 
+# Creates virtual environment
+os.system('poetry shell')
+
 # Installs dependencies
 os.system('poetry install')
 

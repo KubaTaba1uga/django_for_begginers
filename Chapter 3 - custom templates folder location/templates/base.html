@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Chapter 3</title>
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'hello_world' %}">Home</a>
+            <a href="{% url 'about_me' %}">About</a>
+        </header>
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>

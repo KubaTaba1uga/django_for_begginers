@@ -15,14 +15,8 @@ os.chdir(os.getcwd() + f"/{chapter_name}".replace('\\', ''))
 # Creates Poetry project
 os.system(f'poetry init --no-interaction')
 
-# Adds Django to dependencies
+# Adds Django to project's dependencies
 os.system('poetry add Django')
-
-# Creates virtual environment
-os.system('poetry shell')
-
-# Installs dependencies
-os.system('poetry install')
 
 # Creates Django project
 os.system('poetry run django-admin startproject config .')

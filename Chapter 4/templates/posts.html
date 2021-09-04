@@ -1,2 +1,7 @@
 <!-- posts.html -->
-<h1>Posts</h1>
+<h1>Posts board</h1>
+<ul>
+    {% for post in last_posts %}
+        <li>{{ post.content }}</li>
+    {% endfor %}
+</ul>

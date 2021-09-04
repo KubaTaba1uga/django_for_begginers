@@ -1,7 +1,15 @@
 <!-- posts.html -->
 <h1>Posts board</h1>
-<ul>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+    </tr>
     {% for post in last_posts %}
-        <li>{{ post.content }}</li>
+        <tr>
+            <td>{{ post.title }}</th>
+            <td>{{ post.content }}</th>
+        </tr>
     {% endfor %}
-</ul>
+</table>
+

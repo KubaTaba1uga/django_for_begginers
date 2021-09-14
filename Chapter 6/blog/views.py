@@ -1,5 +1,6 @@
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from .models import Post
 
 
@@ -42,3 +43,13 @@ class PostUpdate(UpdateView):
     template_name = 'post_update.html'
     model = Post
     fields = ['title', 'body']
+
+
+class PostDelete(DeleteView):
+    template_name = 'post_delete.html'
+    model = Post
+    success_url = reverse_lazy('post_show_all')
+    """
+    After URL completion, wait until deletion end
+    with executing redirection
+    """

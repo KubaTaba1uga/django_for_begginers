@@ -20,5 +20,6 @@ class Post(models.Model):
         return reverse('post', args=[str(self.id)])
         """                        
         Reference the URL object by it's name
-        & pass (to URL object) model instance id, as an argument
+        & pass (to URL object) model instance id, as an argument.
+        URL is executed immediately after creation
         """

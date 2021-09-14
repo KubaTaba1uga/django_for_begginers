@@ -1,15 +1,20 @@
 <!-- templates/base.html -->
 {% load static %}
 <html>
-    <head>
-        <title>Django Blog</title>
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    </head>
-    <body>
 
-        {% block content %}
-        
-        {% endblock content %}
-    
-    </body>
+<head>
+    <title>Django Blog</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'home_page' %}"><button>All Posts</button></a>
+        <a href="{% url 'new_post' %}"><button>New Post</button></a>
+    </header>
+
+    {% block content %} {% endblock content %}
+
+</body>
+
 </html>

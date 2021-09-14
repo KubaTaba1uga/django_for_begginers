@@ -6,5 +6,5 @@ urlpatterns = [
     path('post/<int:pk>', PostDetails.as_view(), name='')
 ]
 """
-primary key (id) of bounded model is passed to View as integer, if value preceded with /post
+primary key (id) of bounded model is passed to View as integer, if value is preceded with /post
 """

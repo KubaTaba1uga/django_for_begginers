@@ -1,15 +1,15 @@
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.shortcuts import render
 from .models import Post
 
 
 class HomePage(ListView):
-    template_name = "index.html"
+    template_name = "post_all.html"
     model = Post
 
 
 class PostDetails(DetailView):
-    template_name = "post.html"
+    template_name = "post_details.html"
 
     model = Post
     """
@@ -36,3 +36,9 @@ class PostCreate(CreateView):
     """
     Represent database fields which are exposed by template's form
     """
+
+
+class PostUpdate(UpdateView):
+    template_name = 'post_update.html'
+    model = Post
+    fields = ['title', 'body']

@@ -127,3 +127,8 @@ LOGIN_REDIRECT_URL = 'post_show_all'
 """
 Specify where to redirect user, after succesfull log in
 """
+
+LOGOUT_REDIRECT_URL = 'post_show_all'
+"""
+Specify where to redirect user, after succesfull log out
+"""

@@ -19,9 +19,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls'))
 ]
 """
-    Add log-in & log-out functionalities, under '<app_address>/accounts' url
-
+    Overwrite default Django's sign_up because of top-to-bottom code execution 
 """

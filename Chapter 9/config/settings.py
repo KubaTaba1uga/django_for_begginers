@@ -134,3 +134,8 @@ LOGOUT_REDIRECT_URL = 'home'
 """
 Redirect to URL's name, if log-out succesfull 
 """
+
+# Emails Backend
+# https://docs.djangoproject.com/en/3.2/topics/email/#smtp-backend
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

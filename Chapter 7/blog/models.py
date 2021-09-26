@@ -23,3 +23,4 @@ class Post(models.Model):
         & pass (to URL object) model instance id, as an argument.
         URL is executed immediately after creation
         """
+

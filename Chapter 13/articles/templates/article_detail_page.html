@@ -1,0 +1,10 @@
+<!-- articles/templates/articles -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="post-entry">
+    <h2>{{ articlemodel.title }}</h2>
+    <h3>{{ articlemodel.date }}</h3>
+    <h3>{{ articlemodel.author }}</h3>
+    <p>{{ articlemodel.body }}</p>
+</div>
+{% endblock content %}

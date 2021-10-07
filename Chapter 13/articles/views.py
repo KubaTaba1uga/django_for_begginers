@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import DetailView
+# Custom Code
+from .models import ArticleModel
 
 
-class HomePageView(TemplateView):
-    template_name = 'home_page.html'
+class ArticleDetailView(DetailView):
+    template_name = 'article_detail_page.html'
+    model = ArticleModel

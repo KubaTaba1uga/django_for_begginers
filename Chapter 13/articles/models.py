@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 
-class Article(models.Model):
+class ArticleModel(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
@@ -18,4 +18,4 @@ class Article(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("article_detail", kwargs={"pk": self.id})
+        return reverse("article_detail_url", kwargs={"pk": self.id})

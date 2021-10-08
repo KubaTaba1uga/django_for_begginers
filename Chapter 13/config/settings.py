@@ -125,4 +125,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUserModel'
 
-LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = 'list_articles_url'
+LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = 'article_list_url'

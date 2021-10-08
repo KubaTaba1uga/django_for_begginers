@@ -1,8 +1,10 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-
-from django.db import models
-
 from .models import CustomUserModel
+
+USER_EDITABLE_FIELDS = (
+    'username',
+    'email',
+)
 
 
 class CustomUserCreateForm(UserCreationForm):
@@ -10,7 +12,7 @@ class CustomUserCreateForm(UserCreationForm):
     """
     class Meta(UserCreationForm):
         model = CustomUserModel
-        fields = UserCreationForm.Meta.fields
+        fields = USER_EDITABLE_FIELDS
 
 
 class CustomUserUpdateForm(UserChangeForm):
@@ -18,4 +20,4 @@ class CustomUserUpdateForm(UserChangeForm):
     """
     class Meta:
         model = CustomUserModel
-        fields = UserCreationForm.Meta.fields
+        fields = USER_EDITABLE_FIELDS

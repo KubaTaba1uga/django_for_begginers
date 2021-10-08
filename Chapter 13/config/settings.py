@@ -124,3 +124,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://docs.djangoproject.com/en/3.2/topics/auth/customizing/
 
 AUTH_USER_MODEL = 'accounts.CustomUserModel'
+
+LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = 'list_articles_url'

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "chapter 14"
+version = "0.1.0"
+description = ""
+authors = ["KubaTaba1uga <jakub@buczynski.net.pl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

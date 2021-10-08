@@ -34,7 +34,7 @@
                         {{ user.username }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Change password</a>
+                        <a class="dropdown-item" href="{% url 'password_edit_url' %}">Change password</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">
                             Log Out</a>

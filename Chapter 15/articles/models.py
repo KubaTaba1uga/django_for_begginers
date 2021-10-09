@@ -27,7 +27,10 @@ class CommentModel(models.Model):
     article = models.ForeignKey(
         ArticleModel,
         # Tell Django to use `ArticleModel` as foreign key
-        on_delete=models.CASCADE)
+        on_delete=models.CASCADE,
+        related_name='comments'
+        # While template rendering use 'comments' as context object name
+    )
 
     def __str__(self):
         return self.body[:10]
